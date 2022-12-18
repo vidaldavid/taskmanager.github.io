@@ -1,0 +1,216 @@
+:root {
+    --primary: #0de089;
+    --secondary: #f33c3c;
+    --light: #fff;
+    --dark: #000;
+    --diabled: #e7e7e7;
+    --negro: #000000;
+    --rojo: #f33c3c;
+    --blanco: #ffffff;
+    --gris-oscuro: #111111;
+    --gris-claro: #999999;
+    --negro: #1a191a;
+    --sombra: rgba(153, 153, 513, 0.3);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    height: 100wh;
+    margin-top: 100px;
+    background: rgb(11, 29, 227);
+    background: radial-gradient(circle, rgba(11, 29, 227,1) 0%, rgba(13, 224, 137,1) 100%);
+    background-attachment: fixed;
+}
+
+.container-task{
+  height: 0px;
+}
+
+.roundBorder {
+    border-radius: 5px;
+}
+
+.list {
+    margin: 25px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 5px 5px 5px 1px var(--sombra);
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dateRight {
+    display: flex;
+    align-items: center;
+}
+
+#dateNumber {
+    font-size: 50px;
+}
+
+#dateText {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#dateMonth,
+#dateNumber,
+#dateText  {
+    font-weight: bold;
+}
+
+#dateMonth,
+#dateYear {
+    margin-left: 7px;
+    font-size: 20px;
+}
+
+form {
+    margin: 20px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 35px auto;
+    grid-column-gap: 15px;
+}
+
+input {
+    border: none;
+    padding-left: 10px;
+    background-color: var(--diabled);
+}
+
+input:focus {
+    outline: none;
+}
+
+.addTaskButton,
+.orderButton {
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addTaskButton {
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: var(--diabled);
+}
+
+.orderButton {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+.task {
+    background-color: var(--primary);
+    padding: 15px;
+    margin-top: 15px;
+    color: #222;
+    cursor: pointer;
+}
+
+.done {
+    background-color: transparent;
+    text-decoration: line-through;
+    color: var(--dark);
+}
+
+@media (max-width: 768px){
+  *{
+    cursor: none;
+  }
+
+  body{
+    padding-top: 0px;
+  }
+
+  header{
+    height: 60px;
+  }
+
+  .container-task{
+    height: 600px;
+  }
+
+  .orderButton{
+    cursor: none;
+  }
+
+  .addTaskButton{
+    cursor: none;
+  }
+
+  .roundBorder{
+    cursor: none;
+  }
+
+  .list {
+    margin-top: 70px;
+    width: 85%;
+  }
+
+  .logo{
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+  }
+
+  .container-a{
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: var(--rojo);
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+
+    height: calc(100% - 60px);
+    overflow-y: auto;
+
+    left: 100%;
+    transition: left 0.3s;
+  }
+
+  .background-li{
+    line-height: 70px;
+  }
+
+  .nav-menu-link{
+    font-size: 21px;
+  } 
+
+  .nav-menu-link-background{
+    font-size: 21px;
+  }
+
+  .nav-menu-link:hover{
+    background: none;
+    color: var(--negro);
+  }
+
+  .toggle{
+    display: block;
+  }
+
+  .nav-menu_visible{
+    left: 0;
+  }
+
+  .toggle:focus:not(:focus-visible){
+    outline: none;
+  }
+}
+
+
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
+  display: none;
+}
